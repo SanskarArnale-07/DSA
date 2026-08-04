@@ -3,11 +3,11 @@ using namespace std;
 class Solution {
 public:
     vector<int> findMissingElements(vector<int>& nums) {
-        int mini = *min_element(nums.begin() , nums.end());
-        int maxi = *max_element(nums.begin() , nums.end());
+        int min = *min_element(nums.begin() , nums.end());
+        int max = *max_element(nums.begin() , nums.end());
         unordered_set<int> st(nums.begin() , nums.end());
         vector<int> ans;
-        for(int i = mini; i<= maxi; i++)
+        for(int i = min; i<= max; i++)
         {
             if(st.find(i) == st.end())
             {
