@@ -8,10 +8,10 @@ public:
                 int current = num;
                 int length = 1;
                 while(s.find(current+1)!=s.end()){
-                    current++;
                     length++;
+                    current++;
                 }
-                longest = max(longest,length);
+               longest = max(longest,length);
             }
         }
         return longest;
