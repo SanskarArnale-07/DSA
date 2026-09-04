@@ -7,9 +7,8 @@ public:
         int prefixSum = 0;
         for(int i=0;i<nums.size();i++){
             prefixSum += nums[i];
-            if(mp.count(prefixSum - k)){
-                count += mp[prefixSum - k];
-            }
+            int remove = prefixSum - k;
+            count += mp[remove];
             mp[prefixSum]++;
         }
         return count;
